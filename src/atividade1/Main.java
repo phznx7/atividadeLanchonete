@@ -18,7 +18,7 @@ public class Main {
             
             try {
                 escolha = entrada.nextInt();
-                entrada.nextLine(); // Limpa buffer
+                entrada.nextLine();
 
                 switch (escolha) {
                     case 1:
@@ -38,8 +38,8 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Erro: Digite um número válido.");
-                entrada.nextLine(); // Limpa buffer caso erro ocorra
-                escolha = 0; // Evita loop infinito
+                entrada.nextLine();
+                escolha = 0; 
             }
         } while (escolha != 4);
     }
@@ -68,8 +68,8 @@ public class Main {
             System.out.printf("Total: R$ %.2f%n", total);
         } catch (InputMismatchException e) {
             System.out.println("Erro: Entrada inválida. Digite um número.");
-            entrada.nextLine(); // Evita erro no scanner
-        4}
+            entrada.nextLine();
+        }
     }
 
     private static void cadastrarNovoProduto() {
@@ -82,7 +82,7 @@ public class Main {
             try {
                 System.out.print("Digite o preço do produto: ");
                 valor = entrada.nextDouble();
-                entrada.nextLine(); // Limpa o buffer
+                entrada.nextLine(); 
                 if (valor <= 0) {
                     System.out.println("Erro: O preço deve ser maior que zero.");
                 } else {
@@ -90,7 +90,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Erro: Digite um valor numérico válido.");
-                entrada.nextLine(); // Evita erro no scanner
+                entrada.nextLine(); 
             }
         }
 
